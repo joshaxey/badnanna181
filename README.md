@@ -7,5 +7,5 @@ Takes advantage of an issue in dtoa.cpp allowing us to specify an external non-s
 
 Vita target is 1.81 and lower.
 
-Beginning of reduction attempt, want to call this "Bad Nanna" once I had worked out payload and adapted to work with dumper.
-Became 'irrelevant' once work began on higher firmware version. Others have also taken advantage of this privately and I assume will release soon.
+Beginning of reduction attempt, wanted to call this "Bad Nanna" once I had worked out payload and adapted to work with dumper.
+Became 'irrelevant' once work began on higher firmware version. Others have also taken advantage of this privately and I assume will release actual PoCs soon.
